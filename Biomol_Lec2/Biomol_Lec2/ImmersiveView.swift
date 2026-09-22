@@ -13,9 +13,9 @@ struct ImmersiveView: View {
     var body: some View {
         RealityView { content in
             let sphere1 = ModelEntity(
-                mesh: .generateSphere(radius: 0.1),
-                materials: [SimpleMaterial(color: .cyan, isMetallic: false)])
-            sphere1.position = [-0.6, 1.2, -1]
+                mesh: .generateSphere(radius: 0.2),
+                materials: [SimpleMaterial(color: .red, isMetallic: false)])
+            sphere1.position = [-0.8, 1.2, -1]
             content.add(sphere1)
             
             let sphere2 = ModelEntity(
