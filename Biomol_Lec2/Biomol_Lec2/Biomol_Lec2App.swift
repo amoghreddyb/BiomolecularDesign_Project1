@@ -1,3 +1,5 @@
+// xcode: set sdk=visionOS
+
 //
 //  Biomol_Lec2App.swift
 //  Biomol_Lec2
@@ -18,10 +20,8 @@ struct Biomol_Lec2App: App {
             ContentView()
                 .environment(appModel)
         }
-        .windowStyle(.volumetric)
-        .defaultSize(width: 0.6, height: 0.4, depth: 0.6, in: .meters)
-
-        ImmersiveSpace(id: appModel.immersiveSpaceID) {
+        
+        ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
                 .environment(appModel)
                 .onAppear {
@@ -40,3 +40,4 @@ struct Biomol_Lec2App: App {
 #endif
     }
 }
+

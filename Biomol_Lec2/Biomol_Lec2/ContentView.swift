@@ -1,15 +1,9 @@
-//
-//  ContentView.swift
-//  Biomol_Lec2
-//
-//  Created by Amogh Reddy Badikol on 9/15/26.
-//
-
 import SwiftUI
 import RealityKit
 
 struct ContentView: View {
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
+    
     var body: some View {
         VStack {
             Text("Five Shapes")
@@ -20,7 +14,15 @@ struct ContentView: View {
                     await openImmersiveSpace(id: "ImmersiveSpace")
                 }
             }
+            .padding(.bottom, 50)
+            Model3D(named: "Scene", bundle: .main)
+            ToggleImmersiveSpaceButton()
         }
         .padding()
     }
+}
+
+#Preview(windowStyle: .automatic) {
+    ContentView()
+        .environment(AppModel())
 }
