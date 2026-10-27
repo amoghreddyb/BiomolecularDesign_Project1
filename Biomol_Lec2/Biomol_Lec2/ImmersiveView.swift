@@ -13,7 +13,8 @@ struct ImmersiveView: View {
                 materials: [SimpleMaterial(color: gold, isMetallic: false)])
             box1.position = [0, 1.2, -1]
             box1.components.set(InputTargetComponent())
-            box1.components.set(CollisionComponent(shapes: [.generateBox(size: [0.15, 0.15, 0.15])]));            content.add(box1)
+            box1.components.set(CollisionComponent(shapes: [.generateBox(size: [0.15, 0.15, 0.15])]));
+            content.add(box1)
             box1.move(to: Transform(translation: [0, 1.60, -1]), relativeTo: nil, duration: 2.0)
 
             // Box 2
@@ -21,6 +22,8 @@ struct ImmersiveView: View {
                 mesh: .generateBox(size: 0.15),
                 materials: [SimpleMaterial(color: gold, isMetallic: false)])
             box2.position = [0.3, 1.2, -1]
+            box2.components.set(InputTargetComponent())
+            box2.components.set(CollisionComponent(shapes: [.generateBox(size: [0.15, 0.15, 0.15])]));
             content.add(box2)
             box2.move(to: Transform(translation: [0.3, 1.75, -1]), relativeTo: nil, duration: 2.0)
 
@@ -29,6 +32,8 @@ struct ImmersiveView: View {
                 mesh: .generateBox(size: 0.15),
                 materials: [SimpleMaterial(color: gold, isMetallic: false)])
             box3.position = [0.6, 1.2, -1]
+            box3.components.set(InputTargetComponent())
+            box3.components.set(CollisionComponent(shapes: [.generateBox(size: [0.15, 0.15, 0.15])]));
             content.add(box3)
             box3.move(to: Transform(translation: [0.6, 1.90, -1]), relativeTo: nil, duration: 2.0)
 
@@ -37,6 +42,8 @@ struct ImmersiveView: View {
                 mesh: .generateBox(size: 0.15),
                 materials: [SimpleMaterial(color: gold, isMetallic: false)])
             box4.position = [-0.3, 1.2, -1]
+            box4.components.set(InputTargetComponent())
+            box4.components.set(CollisionComponent(shapes: [.generateBox(size: [0.15, 0.15, 0.15])]));
             content.add(box4)
             box4.move(to: Transform(translation: [-0.3, 1.45, -1]), relativeTo: nil, duration: 2.0)
             
@@ -45,6 +52,8 @@ struct ImmersiveView: View {
                 mesh: .generateBox(size: 0.15),
                 materials: [SimpleMaterial(color: gold, isMetallic: false)])
             box5.position = [-0.6, 1.2, -1]
+            box5.components.set(InputTargetComponent())
+            box5.components.set(CollisionComponent(shapes: [.generateBox(size: [0.15, 0.15, 0.15])]));
             content.add(box5)
             box5.move(to: Transform(translation: [-0.6, 1.30, -1]), relativeTo: nil, duration: 2.0)
         }
